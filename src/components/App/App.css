@@ -1,3 +1,4 @@
+/* App section */
 .App {
   text-align: center;
 } .App-logo {
@@ -10,9 +11,20 @@
 } .App-header {
   font-size: 5em;
   font-family: 'Bungee', cursive;
+  cursor: default;
 } .App-link {
   color: #61dafb;
 }
+/* End of App section */
+
+/* Investments section */
+#NewInvestment {
+  cursor: pointer;
+} .NewRecord {
+  color: #bbb;
+  font-family: 'Bungee', cursive;
+}
+/* End of Investments section */
 
 @keyframes App-logo-spin {
   from {
