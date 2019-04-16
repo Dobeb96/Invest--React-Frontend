@@ -1,3 +1,4 @@
+import Investments from '../Investments';
 import React, { Component } from 'react';
 
 import { Button, Col, Form, Jumbotron } from 'react-bootstrap';
@@ -36,6 +37,7 @@ class NewInvestment extends Component {
       body: JSON.stringify(data)
     })
     this.toggleForm();
+    this.props.onCreate();
   }
 
   newInvestment() {
