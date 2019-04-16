@@ -1,5 +1,5 @@
-import NewInvestment from './NewInvestment/NewInvestment';
 import React, { Component } from 'react';
+import NewInvestment from './NewInvestment/NewInvestment';
 
 import axios from 'axios';
 import { Container } from 'react-bootstrap';

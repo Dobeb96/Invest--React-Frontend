@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Billboard from '../Billboard/Billboard';
 import Footer from '../Footer/Footer';
 import Investments from '../Investments/Investments';
 import Navbar from '../Navbar/Navbar';
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
+        <Billboard />
         <Investments />
         <Footer />
       </div>

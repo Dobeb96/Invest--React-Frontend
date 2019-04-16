@@ -1,4 +1,3 @@
-import Investments from '../Investments';
 import React, { Component } from 'react';
 
 import { Button, Col, Form, Jumbotron } from 'react-bootstrap';
@@ -61,8 +60,11 @@ class NewInvestment extends Component {
             </Form.Row>
             <Form.Row>
               <Col>
-                <Button className="mt-1" variant="primary" type="submit">
+                <Button className="mt-1 mr-1" variant="success" type="submit">
                   Add
+                </Button>
+                <Button className="mt-1" variant="default" onClick={this.toggleForm}>
+                  Cancel
                 </Button>
               </Col>
             </Form.Row>
