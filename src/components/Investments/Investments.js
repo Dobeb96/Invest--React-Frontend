@@ -1,46 +1,35 @@
 import React, { Component } from 'react';
 import NewInvestment from './NewInvestment/NewInvestment';
 
-import axios from 'axios';
 import { Container } from 'react-bootstrap';
 
 class Investments extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      investments: []
-    }
 
-    this.getInvestments = this.getInvestments.bind(this);
-    this.getInvestments();
+    this.fetchInvestments = this.fetchInvestments.bind(this);
   }
 
-  getInvestments() {
-    axios.get('http://localhost:3000/investments')
-    .then((response) => {
-      this.setState({
-        investments: response.data
-      });
-      // console.log(this.state.investments)
-    });
+  fetchInvestments() {
+    this.props.fetchInvestments();
   }
 
   render() {
     return (
       <Container className="py-3">
-        <NewInvestment onCreate={this.getInvestments} />
+        <NewInvestment onCreate={this.fetchInvestments} />
         <table className="table">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Created at</th>
               <th scope="col">Invested</th>
-              <th scope="col">Earned</th>
+              <th scope="col">Returned</th>
               <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
-            {this.state.investments.map(investment =>
+            {this.props.investments.reverse().map(investment =>
               <tr key={investment.id}>
                 <th scope="row">{investment.id}</th>
                 <td>{investment.created_at}</td>
