@@ -34,9 +34,10 @@ class NewInvestment extends Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data)
+    }).then(() => {
+      this.toggleForm();
+      this.props.onCreate();
     })
-    this.toggleForm();
-    this.props.onCreate();
   }
 
   newInvestment() {
