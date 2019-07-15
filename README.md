@@ -16,3 +16,6 @@ You will also see any lint errors in the console.
 See the backend code in Rails API mode:
 
 https://github.com/Dobeb96/Invest--Ruby-Backend
+
+### Preview
+![Preview](/src/screenshot.png)
